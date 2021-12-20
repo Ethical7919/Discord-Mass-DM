@@ -1,6 +1,8 @@
 # Python-Mass-DM
 A simple Discord Mass Dm with Scraper
 
+If Member Scraper in Taliban.py doesn't work. You can DM me
+
 # Requirements (Must Read)
 [ ! ] Create these files named message.txt , token.txt , users.txt
 
