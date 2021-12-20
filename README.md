@@ -1,8 +1,8 @@
 # Python-Mass-DM
 A simple Discord Mass Dm with Scraper
 
-# Requirements
-Create these files named message.txt , token.txt , users.txt
+# Requirements (Must Read)
+[ ! ] Create these files named message.txt , token.txt , users.txt
 
 [ ! ] If you stuck when you scraped member, please press Ctrl + C to continue
 
