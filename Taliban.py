@@ -3,7 +3,7 @@ from colorama import Fore
 
 def BeepBoop_BoopBeep():
     message = input(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Message to Mass DM: ")
-    tokens = open('tokens.txt','r').read().splitlines()
+    tokens = input(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Token: ")
     with open(f'users.txt', 'r') as Tokens:
         tkens = []
         for line in Tokens:
