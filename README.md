@@ -1,7 +1,6 @@
 # Python-Mass-DM
 A simple Discord Mass Dm with Scraper
-
-If Member Scraper in Taliban.py doesn't work. You can DM me cuz that scraper is for tokens that got admin in the server
+Please use m_scraper.py before using Mass DM
 
 # Requirements (Must Read)
 [ ! ] Create these files named message.txt , token.txt , users.txt
