@@ -2,7 +2,7 @@ import requests, sys, os
 from colorama import Fore
 
 def BeepBoop_BoopBeep():
-    message = input(" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Message to Mass DM: ")
+    message = input(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Message to Mass DM: ")
     tokens = open('tokens.txt','r').read().splitlines()
     with open(f'users.txt', 'r') as Tokens:
         tkens = []
