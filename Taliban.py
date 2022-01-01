@@ -1,30 +1,9 @@
-import requests, discord, sys, os
-from discord.ext import commands
+import requests, sys, os
 from colorama import Fore
 
-intents = discord.Intents.all()
-intents.members = True
-client = commands.Bot(command_prefix="Scraper!", case_insensitive=False, intents=intents)
-
-#The Scraper is not mine!
-
-async def Taliban():
-    guild = input(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Guild ID: ")
-    await client.wait_until_ready()
-    guildOBJ = client.get_guild(int(guild))
-    members = await guildOBJ.chunk()
-
-    members_ = 0
-    os.remove('users.txt')
-    f = open("users.txt", "a+")
-    for member in members:
-        f.write(f"{member.id}\n")
-        members_ += 1
-    print(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Scraped {members_} Members!")
-
 def BeepBoop_BoopBeep():
-    message = open('message.txt', 'r').read()
-    tokens = open('token.txt','r').read().splitlines()
+    message = input(" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Message to Mass DM: ")
+    tokens = open('tokens.txt','r').read().splitlines()
     with open(f'users.txt', 'r') as Tokens:
         tkens = []
         for line in Tokens:
@@ -38,10 +17,4 @@ def BeepBoop_BoopBeep():
             except Exception as e:
                 pass
 
-@client.event
-async def on_ready():
-    await Taliban()
-
-client.run("", bot=False) #Put your token here (Not bot token) so it can scrape
 BeepBoop_BoopBeep()
-os.system('cls; clear')
