@@ -10,10 +10,9 @@ def BeepBoop_BoopBeep():
             tkens.append(line.strip())
         for tid in tkens:
             try:
-                print(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Dm")
-                for tok in tokens:
-                    r = requests.post(f'https://discordapp.com/api/v9/users/@me/channels', headers = {'Authorization': f"Bot {tok}"}, json = {'recipient_id': tid}).json()
-                    r2 = requests.post(f"https://discordapp.com/api/v9/channels/{r['id']}/messages", headers = {'Authorization': f"Bot {tok}"}, json = {'content': message,'nonce':'','tts':False})
+                print(f" {Fore.RESET}[{Fore.BLUE}>{Fore.RESET}]{Fore.RESET} Dmed")
+                r = requests.post(f'https://discordapp.com/api/v9/users/@me/channels', headers = {'Authorization': f"Bot {tokens}"}, json = {'recipient_id': tid}).json()
+                r2 = requests.post(f"https://discordapp.com/api/v9/channels/{r['id']}/messages", headers = {'Authorization': f"Bot {tokens}"}, json = {'content': message,'nonce': '','tts': False})
             except Exception as e:
                 pass
 
